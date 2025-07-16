@@ -29,7 +29,7 @@ public class LinkedList {
 
     // Add a new node to the end of the list
     public void add(int value) {
-    if (head == null) {
+        if (head == null) {
             // List is empty -> create new node and initialize head and tail
             head = tail = new Node(value);
         } else {
@@ -37,6 +37,34 @@ public class LinkedList {
             Node newNode = new Node(value);
             tail.setNext(newNode); // Set next of current tail to the new node
             tail = newNode; // Move tail to the last node
+        }
+    }
+
+    // Remove node by value
+    public void remove(int value) {
+        // Check if list is empty
+        if (head == null) {
+            return;
+        } else {
+            Node current = head;
+            Node before = null;
+            // Find first instance of value in the list
+            while (current != null && current.getValue() != value) {
+                before = current;
+                current = current.getNext();
+            }
+
+            // If value is tail -> set node before to tail
+            if (current == tail) {
+                before.setNext(null);
+                tail = before;
+            // If value is head -> set head to the next node
+            } else if (current == head) {
+                head = head.getNext();
+            // Other cases -> set the node before the value node to next node
+            } else {
+                before.setNext(current.getNext());
+            }
         }
     }
 
