@@ -7,6 +7,7 @@ My own implementation of the linked list data structure using java. Right now it
 
 <details><summary><span style="font-size: 1.2em; font-weight: bold;">Singly Linked List</span></summary>
 
+---
 
 For example purposes we will consider this as "exampleList" : 
 
