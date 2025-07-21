@@ -1,6 +1,17 @@
 # Linked List
 
+![Java](https://img.shields.io/badge/language-Java-blue)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 My own implementation of the linked list data structure using java. Right now it only supports integers.
+
+## Table of Contents
+- [Singly Linked List](#singly-linked-list)
+- [Doubly Linked List](#doubly-linked-list)
+- [Methods](#methods)
+- [Time Complexity](#time-complexity)
+- [License](#license)
+
 
 ## Singly Linked List
 
@@ -74,6 +85,7 @@ This allows a significant increase in performance, as it minimizes the number of
 When creating a new list, we can optionally pass an initial List<Integer>. These values will be added to the list in order during construction.<br>
 If no initial list is provided, the list starts empty, with both the head and tail set to null.<br>
 
+---
 
 <details><summary><span style="font-size: 1.5em; font-weight: bold;">Node</span></summary>
 
