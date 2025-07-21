@@ -7,12 +7,12 @@ My own implementation of the linked list data structure using java.<br>
 The current version only supports integers since i haven't gotten around to adding generics.
 
 ## Table of Contents
-- [🆚Singly vs Doubly Linked List](#singly-vs-doubly-linked-list)
-- [➡️Singly Linked List](#singly-linked-list)
-- [🔁Doubly Linked List](#doubly-linked-list)
-- [🛠️Methods](#methods)
-- [⏱️Time Complexity](#time-complexity)
-- [📝License](#license)
+- [Singly vs Doubly Linked List](#singly-vs-doubly-linked-list)
+- [Singly Linked List](#singly-linked-list)
+- [Doubly Linked List](#doubly-linked-list)
+- [Methods](#methods)
+- [Time Complexity](#time-complexity)
+- [License](#license)
 
 
 ## 🆚Singly vs Doubly Linked List
