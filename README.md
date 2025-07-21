@@ -4,8 +4,56 @@ My own implementation of the linked list data structure using java. Right now it
 
 ## References
 
+## Singly Linked List
 
-<details><summary><span style="font-size: 1.5em; font-weight: bold;">Singly Linked List</span></summary>
+This linked list is singly linked, meaning each node only points to the next one.<br>
+When initializing the list it can take an initial list of integers that get added to the list in the constructor.<br>
+When the initial list is not provided the list is considered empty but is initialized with a head / tail that are null.
+
+---
+
+<details><summary><span style="font-size: 1.5em; font-weight: bold;">Node</span></summary>
+
+The Node class consists of a value and a pointer to the next Node.<br>
+Each node object represents a single element in the list.<br>
+A tail node points to null. If a node's next is null, it is considered the tail.
+
+The following methods exist for each node:
+
+<details>
+<summary>getValue()</summary>
+
+*Gets the value of the node.*
+
+- **Returns:** *int*
+- **Args:** *None*
+</details>
+
+<details>
+<summary>getNext()</summary>
+
+*Gets the next node.*
+
+- **Returns:** *Node*
+- **Args:** *None*
+</details>
+
+<details>
+<summary>setNext(Node next)</summary>
+
+*Sets the next node.*
+
+- **Returns:** *None*
+- **Args:** *next (Node)*
+</details>
+
+
+
+</details>
+
+---
+
+<details><summary><span style="font-size: 1.5em; font-weight: bold;">Methods</span></summary>
 
 ---
 
@@ -338,7 +386,7 @@ exampleList.remove(52);
 ```
 *Updated exampleList:*
 ```java
-    {12, 34, 16, 9, 29}
+{12, 34, 16, 9, 29}
 ```
 
 **Exceptions:**
