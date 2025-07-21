@@ -3,17 +3,41 @@
 ![Java](https://img.shields.io/badge/language-Java-blue)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-My own implementation of the linked list data structure using java. Right now it only supports integers.
+My own implementation of the linked list data structure using java.<br> 
+The current version only supports integers since i haven't gotten around to adding generics.
 
 ## Table of Contents
-- [Singly Linked List](#singly-linked-list)
-- [Doubly Linked List](#doubly-linked-list)
-- [Methods](#methods)
-- [Time Complexity](#time-complexity)
-- [License](#license)
+- [🆚Singly vs Doubly Linked List](#singly-vs-doubly-linked-list)
+- [➡️Singly Linked List](#singly-linked-list)
+- [🔁Doubly Linked List](#doubly-linked-list)
+- [🛠️Methods](#methods)
+- [⏱️Time Complexity](#time-complexity)
+- [📝License](#license)
 
 
-## Singly Linked List
+## 🆚Singly vs Doubly Linked List
+
+| Feature              | Singly Linked List | Doubly Linked List |
+|----------------------|--------------------|---------------------|
+| Forward Traversal    | ✅                 | ✅                  |
+| Backward Traversal   | ❌                 | ✅                  |
+| Memory per Node      | 1 pointer          | 2 pointers          |
+| Insert at middle     | Slower             | Faster (on average) |
+
+
+## ➡️Singly Linked List
+
+### Demo
+```java
+SinglyLinkedList demoList = new SinglyLinkedList();
+demoList.add(10);
+demoList.add(20);
+demoList.print();
+```
+*Output:*
+```java
+10, 20,
+```
 
 #### How it works
 
@@ -68,7 +92,19 @@ The following methods exist for each node:
 
 ---
 
-## Doubly Linked List
+## 🔁Doubly Linked List
+
+### Demo
+```java
+DoublyLinkedList demoList = new DoublyLinkedList();
+demoList.add(10);
+demoList.add(20);
+demoList.print();
+```
+*Output:*
+```java
+10, 20,
+```
 
 #### How it works
 
@@ -144,7 +180,7 @@ The following methods exist for each node:
 
 ---
 
-## Methods
+## 🛠️Methods
 
 
 For example purposes we will consider:
@@ -545,7 +581,7 @@ exampleList.print();
 
 ---
 
-## Time Complexity
+## ⏱️Time Complexity
 
 | Operation         | Singly Linked List | Doubly Linked List |
 |------------------|--------------------|---------------------|
@@ -574,7 +610,7 @@ While this is still O(n), it's more efficient in practice than singly linked tra
 
 ---
 
-## License
+## 📝License
 
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE.md) file for details.
 
