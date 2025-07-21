@@ -50,7 +50,7 @@ To access a node, we traverse the list starting from the head.<br>
 #### Initialization
 
 When creating a new list, we can optionally pass an initial List<Integer>. These values will be added to the list in order during construction.<br>
-If no initial list is provided, the list starts empty, with both the head and tail set to null.<br>
+If no initial list is provided, the list is considered empty, with both the head and tail set to null.<br>
 
 ---
 
