@@ -55,7 +55,6 @@ The following methods exist for each node:
 
 <details><summary><span style="font-size: 1.5em; font-weight: bold;">Methods</span></summary>
 
----
 
 For example purposes we will consider:
 ```java
@@ -92,7 +91,6 @@ exampleList.getFirst();
 *If the list is empty the method returns ```-1```.*
 </details>
 
----
 
 <details>
 <summary><strong>getLast()</strong></summary>
@@ -117,7 +115,6 @@ exampleList.getLast();
 *If the list is empty the method returns ```-1```.*
 </details>
 
----
 
 <details>
 <summary><strong>get(int index)</strong></summary>
@@ -142,7 +139,6 @@ exampleList.get(3);
 *If the list is empty or the index is invalid the method returns ```-1```.*
 </details>
 
----
 
 <details>
 <summary><strong>addFirst(int value)</strong></summary>
@@ -167,7 +163,6 @@ exampleList.addFirst(72);
 *None*
 </details>
 
----
 
 <details>
 <summary><strong>add(int value)</strong></summary>
@@ -192,7 +187,6 @@ exampleList.add(72);
 *None*
 </details>
 
----
 
 <details>
 <summary><strong>insertAt(int index, int value)</strong></summary>
@@ -217,7 +211,6 @@ exampleList.insertAt(2, 23);
 *If the index is invalid, the method performs no action.*
 </details>
 
----
 
 <details>
 <summary><strong>addAll(List&lt;Integer&gt; values)</strong></summary>
@@ -244,7 +237,6 @@ exampleList.addAll(listToAdd);
 *None*
 </details>
 
----
 
 <details>
 <summary><strong>isEmpty()</strong></summary>
@@ -269,7 +261,6 @@ false
 *None*
 </details>
 
----
 
 <details>
 <summary><strong>size()</strong></summary>
@@ -294,7 +285,6 @@ exampleList.size();
 *None*
 </details>
 
----
 
 <details>
 <summary><strong>cloneList()</strong></summary>
@@ -319,7 +309,6 @@ SinglyLinkedList {12, 34, 52, 16, 9, 29}
 *None*
 </details>
 
----
 
 <details>
 <summary><strong>contains(int value)</strong></summary>
@@ -344,7 +333,6 @@ true
 *None*
 </details>
 
----
 
 <details>
 <summary><strong>indexOf(int value)</strong></summary>
@@ -369,7 +357,6 @@ exampleList.indexOf(16);
 *If the value is not in the list the method returns ```-1```.*
 </details>
 
----
 
 <details>
 <summary><strong>remove(int value)</strong></summary>
@@ -394,7 +381,6 @@ exampleList.remove(52);
 *If the list is empty or no node with the given value was found, the method performs no action.*
 </details>
 
----
 
 <details>
 <summary><strong>removeAt(int index)</strong></summary>
@@ -419,7 +405,6 @@ exampleList.removeAt(0);
 *If the list is empty or the index is invalid, the method performs no action.*
 </details>
 
----
 
 <details>
 <summary><strong>print()</strong></summary>
@@ -445,6 +430,10 @@ exampleList.print();
 </details>
 
 </details>
+
+---
+
+## License
 
 
 
