@@ -255,6 +255,12 @@ public class SinglyLinkedList {
         before.setNext(current.getNext());
     }
 
+    // Clear the list
+    public void clear() {
+        head = null;
+        tail = null;
+    }
+
     // Print all node values in the list
     public void print() {
         Node current = head;
