@@ -53,14 +53,86 @@ The following methods exist for each node:
 - **Returns:** *None*
 - **Args:** *next (Node)*
 </details>
+</details>
+
+---
+
+## Doubly Linked List
+
+#### How it works
+
+This linked list is doubly linked, meaning each node points to the next and previous node.<br>
+A head node exists as the entry point to the list, and a tail node marks the end.<br>
+Unlike singly linked lists, we can traverse the list in both directions.<br>
+To access a node, we traverse the list starting from either the head or tail, depending on which direction is more efficient.<br>
+This allows a significant increase in performance, as it minimizes the number of traversal steps required to reach a node.<br>
+
+**head** ↔ node#1 ↔ node#2 ↔ node#3 ↔ node#4 ↔ node#5 ↔ **tail**
+
+#### Initialization
+
+When creating a new list, we can optionally pass an initial List<Integer>. These values will be added to the list in order during construction.<br>
+If no initial list is provided, the list starts empty, with both the head and tail set to null.<br>
 
 
+<details><summary><span style="font-size: 1.5em; font-weight: bold;">Node</span></summary>
+
+The Node class consists of a value, a pointer to the next Node and a pointer to the previous Node.<br>
+Each node object represents a single element in the list.<br>
+A tail node points to null. If a node's next is null, it is considered the tail.
+
+The following methods exist for each node:
+
+<details>
+<summary>getValue()</summary>
+
+*Gets the value of the node.*
+
+- **Returns:** *int*
+- **Args:** *None*
+</details>
+
+<details>
+<summary>getNext()</summary>
+
+*Gets the next node.*
+
+- **Returns:** *Node*
+- **Args:** *None*
+</details>
+
+<details>
+<summary>getPrev()</summary>
+
+*Gets the previous node.*
+
+- **Returns:** *Node*
+- **Args:** *None*
+</details>
+
+<details>
+<summary>setNext(Node next)</summary>
+
+*Sets the next node.*
+
+- **Returns:** *None*
+- **Args:** *next (Node)*
+</details>
+
+<details>
+<summary>setPrev(Node prev)</summary>
+
+*Sets the previous node.*
+
+- **Returns:** *None*
+- **Args:** *prev (Node)*
+</details>
 
 </details>
 
 ---
 
-<details><summary><span style="font-size: 1.5em; font-weight: bold;">Methods</span></summary>
+## Methods
 
 
 For example purposes we will consider:
@@ -121,7 +193,6 @@ exampleList.getLast();
 
 *If the list is empty the method returns ```-1```.*
 </details>
-
 
 <details>
 <summary><strong>get(int index)</strong></summary>
@@ -414,6 +485,30 @@ exampleList.removeAt(0);
 
 
 <details>
+<summary><strong>clear()</strong></summary>
+
+*Clears the list.*
+
+- **Returns:** *None*
+
+- **Args:** *None*
+
+**Example:**
+```java
+exampleList.clear();
+```
+*Updated exampleList:*
+```java
+{}
+```
+
+**Exceptions:**
+
+*None*
+</details>
+
+
+<details>
 <summary><strong>print()</strong></summary>
 
 *Prints all values of the list.*
@@ -436,27 +531,36 @@ exampleList.print();
 *None*
 </details>
 
-</details>
-
 ---
 
-## Doubly Linked List
+## Time Complexity
 
-#### How it works
+| Operation         | Singly Linked List | Doubly Linked List |
+|------------------|--------------------|---------------------|
+| `getFirst()`     | O(1)               | O(1)                |
+| `getLast()`      | O(1)               | O(1)                |
+| `get(index)`     | O(n)               | O(n)*               |
+| `add(value)`     | O(1)               | O(1)                |
+| `addFirst(value)`| O(1)               | O(1)                |
+| `insertAt(index)`| O(n)               | O(n)*               |
+| `addAll(list)`   | O(n)               | O(n)                |
+| `isEmpty()`      | O(1)               | O(1)                |
+| `size()`         | O(1)               | O(1)                |
+| `cloneList()`    | O(n)               | O(n)                |
+| `contains(value)`| O(n)               | O(n)                |
+| `indexOf(value)` | O(n)               | O(n)                |
+| `remove(value)`  | O(n)               | O(n)                |
+| `removeAt(index)`| O(n)               | O(n)*               |
+| `clear()`        | O(1)               | O(1)                |
+| `print()`        | O(n)               | O(n)                |
 
-This linked list is doubly linked, meaning each node points to the next and previous node.<br>
-A head node exists as the entry point to the list, and a tail node marks the end.<br>
-Unlike singly linked lists, we can traverse the list in both directions.<br>
-To access a node, we traverse the list starting from either the head or tail, depending on which direction is more efficient.<br>
-This allows a significant increase in performance, as it minimizes the number of traversal steps required to reach a node.<br>
 
-**head** ↔ node#1 ↔ node#2 ↔ node#3 ↔ node#4 ↔ node#5 ↔ **tail**
+\*For `get(index)`, `insertAt(index)`, and `removeAt(index)` in the **doubly linked list**,<br>
+we choose to traverse from head or tail depending on index.<br>
+That in turn reduces the average traversal length to approximately **n/2**.
+While this is still O(n), it's more efficient in practice than singly linked traversal.
 
-#### Initialization
-
-When creating a new list, we can optionally pass an initial List<Integer>. These values will be added to the list in order during construction.<br>
-If no initial list is provided, the list starts empty, with both the head and tail set to null.<br>
-
+---
 
 ## License
 
