@@ -29,12 +29,29 @@ public class SinglyLinkedList {
         tail = null;
     }
 
+    public SinglyLinkedList(List<Integer> initialValues) {
+        head = null;
+        tail = null;
+
+        for (int value : initialValues) {
+            this.add(value);
+        }
+    }
+
     public int getFirst() {
-        return head.getValue();
+        if (head == null) {
+            return -1;
+        } else {
+            return head.getValue();
+        }
     }
 
     public int getLast() {
-        return tail.getValue();
+        if (head == null) {
+            return -1;
+        } else {
+            return tail.getValue();
+        }
     }
 
     // Get value by index
@@ -206,20 +223,24 @@ public class SinglyLinkedList {
         }
     }
 
-
-    public int removeAt(int indx) {
+    // Remove node at given index
+    public void removeAt(int indx) {
         Node current = head;
         Node before = null;
         int nodeToRemove;
+
+        // Check for empty list
+        if (current == null) {
+            return;
+        }
 
         // Check for 0 index
         if (indx == 0) {
             nodeToRemove = head.getValue();
             head = head.getNext();
-            return nodeToRemove;
         // Check if index is out of bounds
         } else if (indx < 0 || indx >= size()) {
-            return -1;
+            return;
         }
 
         for (int i = 0; i < indx; i++) {
@@ -232,9 +253,6 @@ public class SinglyLinkedList {
         }
 
         before.setNext(current.getNext());
-
-        return current.getValue();
-
     }
 
     // Print all node values in the list
