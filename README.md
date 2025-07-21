@@ -2,13 +2,20 @@
 
 My own implementation of the linked list data structure using java. Right now it only supports integers.
 
-## References
-
 ## Singly Linked List
 
-This linked list is singly linked, meaning each node only points to the next one.<br>
-When initializing the list it can take an initial list of integers that get added to the list in the constructor.<br>
-When the initial list is not provided the list is considered empty but is initialized with a head / tail that are null.
+#### How it works
+
+This linked list is singly linked, meaning each node only points to the next node.<br>
+A head node exists as the entry point to the list, and a tail node marks the end.
+To access a node, we traverse the list starting from the head.<br>
+
+**head** → node#1 → node#2 → node#3 → node#4 → node#5 → **tail**
+
+#### Initialization
+
+When creating a new list, we can optionally pass an initial List<Integer>. These values will be added to the list in order during construction.<br>
+If no initial list is provided, the list starts empty, with both the head and tail set to null.<br>
 
 ---
 
@@ -432,6 +439,24 @@ exampleList.print();
 </details>
 
 ---
+
+## Doubly Linked List
+
+#### How it works
+
+This linked list is doubly linked, meaning each node points to the next and previous node.<br>
+A head node exists as the entry point to the list, and a tail node marks the end.<br>
+Unlike singly linked lists, we can traverse the list in both directions.<br>
+To access a node, we traverse the list starting from either the head or tail, depending on which direction is more efficient.<br>
+This allows a significant increase in performance, as it minimizes the number of traversal steps required to reach a node.<br>
+
+**head** ↔ node#1 ↔ node#2 ↔ node#3 ↔ node#4 ↔ node#5 ↔ **tail**
+
+#### Initialization
+
+When creating a new list, we can optionally pass an initial List<Integer>. These values will be added to the list in order during construction.<br>
+If no initial list is provided, the list starts empty, with both the head and tail set to null.<br>
+
 
 ## License
 
