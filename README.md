@@ -5,33 +5,43 @@ My own implementation of the linked list data structure using java. Right now it
 ## References
 
 
-<details><summary><span style="font-size: 1.2em; font-weight: bold;">Singly Linked List</span></summary>
+<details><summary><span style="font-size: 1.5em; font-weight: bold;">Singly Linked List</span></summary>
 
 ---
 
-For example purposes we will consider this as "exampleList" : 
+For example purposes we will consider:
+```java
+List<Integer> initialValues = new ArrayList<>(Arrays.asList(12,34,52,16,9,29));
 
-    {12, 34, 52, 16, 9, 29}
-
+SinglyLinkedList exampleList = new SinglyLinkedList(initialValues);
+```
+So exampleList is:
+```java
+{12, 34, 52, 16, 9, 29}
+```
 ---
 
 <details>
 <summary><strong>getFirst()</strong></summary>
 
-> Gets the value of the first node.
+*Gets the value of the first node.*
 
-**Returns :** *int*
+- **Returns:** *int*
 
-**Args :** *None*
+- **Args:** *None*
 
-**Example :**
-
-    exampleList.getFirst();
-
+**Example:**
+```java
+exampleList.getFirst();
+```
 *Return value:*
+```java
+12
+```
 
-    12    
+**Exceptions:**
 
+*If the list is empty the method returns ```-1```.*
 </details>
 
 ---
@@ -39,20 +49,24 @@ For example purposes we will consider this as "exampleList" :
 <details>
 <summary><strong>getLast()</strong></summary>
 
-> Gets the value of the last node.
+*Gets the value of the last node.*
 
-**Returns :** *int*
+- **Returns:** *int*
 
-**Args :** *None*
+- **Args:** *None*
 
-**Example : **
-
-    exampleList.getLast();
-
+**Example:**
+```java
+exampleList.getLast();
+```
 *Return value:*
+```java
+29
+```
 
-    29
+**Exceptions:**
 
+*If the list is empty the method returns ```-1```.*
 </details>
 
 ---
@@ -60,20 +74,24 @@ For example purposes we will consider this as "exampleList" :
 <details>
 <summary><strong>get(int index)</strong></summary>
 
-> Gets the value of the node with a given index.
+*Gets the value of the node with a given index.*
 
-**Returns :** *int*
+- **Returns:** *int*
 
-**Args :** *index (int)*
+- **Args:** *index (int)*
 
-**Example :**
-
-    exampleList.get(3);
-
+**Example:**
+```java
+exampleList.get(3);
+```
 *Return value:*
+```java
+16
+```
 
-    16
+**Exceptions:**
 
+*If the list is empty or the index is invalid the method returns ```-1```.*
 </details>
 
 ---
@@ -81,20 +99,24 @@ For example purposes we will consider this as "exampleList" :
 <details>
 <summary><strong>addFirst(int value)</strong></summary>
 
-> Adds a node with a given value to the front of the list.
+*Adds a node with a given value to the front of the list.*
 
-**Returns :** *None*
+- **Returns:** *None*
 
-**Args :** *value (int)*
+- **Args:** *value (int)*
 
-**Example :**
-
-    exampleList.addFirst(72);
-
+**Example:**
+```java
+exampleList.addFirst(72);
+```
 *Updated exampleList:*
+```java
+{72, 12, 34, 52, 16, 9, 29}
+```
 
-    {72, 12, 34, 52, 16, 9, 29}
+**Exceptions:**
 
+*None*
 </details>
 
 ---
@@ -102,20 +124,24 @@ For example purposes we will consider this as "exampleList" :
 <details>
 <summary><strong>add(int value)</strong></summary>
 
-> Adds a node with a given value to the end of the list.
+*Adds a node with a given value to the end of the list.*
 
-**Returns :** *None*
+- **Returns:** *None*
 
-**Args :** *value (int)*
+- **Args:** *value (int)*
 
-**Example :**
-
-    exampleList.add(72);
-
+**Example:**
+```java
+exampleList.add(72);
+```
 *Updated exampleList:*
+```java
+{12, 34, 52, 16, 9, 29, 72}
+```
 
-    {12, 34, 52, 16, 9, 29, 72}
+**Exceptions:**
 
+*None*
 </details>
 
 ---
@@ -123,43 +149,51 @@ For example purposes we will consider this as "exampleList" :
 <details>
 <summary><strong>insertAt(int index, int value)</strong></summary>
 
-> Inserts a node with a given value between two other nodes according to a given index.
+*Inserts a node with a given value between two other nodes according to a given index.*
 
-**Returns :** *None*
+- **Returns:** *None*
 
-**Args :** *index (int), value (int)*
+- **Args:** *index (int), value (int)*
 
-**Example :**
-
-    exampleList.insertAt(2, 23);
-
+**Example:**
+```java
+exampleList.insertAt(2, 23);
+```
 *Updated exampleList:*
+```java
+{12, 34, 23, 52, 16, 9, 29}
+```
 
-    {12, 34, 23, 52, 16, 9, 29}
+**Exceptions:**
 
+*If the index is invalid, the method performs no action.*
 </details>
 
 ---
 
 <details>
-<summary><strong>addAll(List&lt;int&gt; values)</strong></summary>
+<summary><strong>addAll(List&lt;Integer&gt; values)</strong></summary>
 
-> Adds a collection of values to the end of the list.
+*Adds a collection of values to the end of the list.*
 
-**Returns :** *None*
+- **Returns:** *None*
 
-**Args :** *values (List<int>)*
+- **Args:** *values (List<Integer>)*
 
-**Example :**
+**Example:**
+```java
+List<Integer> listToAdd = new ArrayList<>(Arrays.asList(45, 67, 81));
 
-    List<int> listToAdd = new ArrayList<>(45, 67, 81);
-
-    exampleList.addAll(listToAdd);
-
+exampleList.addAll(listToAdd);
+```
 *Updated exampleList:*
+```java
+{12, 34, 52, 16, 9, 29, 45, 67, 81}
+```
 
-    {12, 34, 52, 16, 9, 29, 45, 67, 81}
+**Exceptions:**
 
+*None*
 </details>
 
 ---
@@ -167,20 +201,24 @@ For example purposes we will consider this as "exampleList" :
 <details>
 <summary><strong>isEmpty()</strong></summary>
 
-> Checks whether a list is empty or not.
+*Checks whether a list is empty or not.*
 
-**Returns :** *boolean*
+- **Returns:** *boolean*
 
-**Args :** *None*
+- **Args:** *None*
 
-**Example :**
-
-    exampleList.isEmpty();
-
+**Example:**
+```java
+exampleList.isEmpty();
+```
 *Return value:*
+```java
+false
+```
 
-    false
+**Exceptions:**
 
+*None*
 </details>
 
 ---
@@ -188,20 +226,24 @@ For example purposes we will consider this as "exampleList" :
 <details>
 <summary><strong>size()</strong></summary>
 
-> Gets the size (amount of values) inside the list.
+*Gets the size (amount of values) inside the list.*
 
-**Returns :** *integer*
+- **Returns:** *integer*
 
-**Args :** *None*
+- **Args:** *None*
 
-**Example :**
-
-    exampleList.size();
-
+**Example:**
+```java
+exampleList.size();
+```
 *Return value:*
+```java
+6
+```
 
-    6
+**Exceptions:**
 
+*None*
 </details>
 
 ---
@@ -209,20 +251,24 @@ For example purposes we will consider this as "exampleList" :
 <details>
 <summary><strong>cloneList()</strong></summary>
 
-> Creates a deep copy of the list.
+*Creates a deep copy of the list.*
 
-**Returns :** *SinglyLinkedList*
+- **Returns:** *SinglyLinkedList*
 
-**Args :** *None*
+- **Args:** *None*
 
-**Example :**
-
-    exampleList.cloneList();
-
+**Example:**
+```java
+exampleList.cloneList();
+```
 *Return value:*
+```java
+SinglyLinkedList {12, 34, 52, 16, 9, 29}
+```
 
-    SinglyLinkedList
+**Exceptions:**
 
+*None*
 </details>
 
 ---
@@ -230,20 +276,24 @@ For example purposes we will consider this as "exampleList" :
 <details>
 <summary><strong>contains(int value)</strong></summary>
 
-> Checks whether a given value is inside the list.
+*Checks whether a given value is inside the list.*
 
-**Returns :** *boolean*
+- **Returns:** *boolean*
 
-**Args :** *value (int)*
+- **Args:** *value (int)*
 
-**Example :**
-
-    exampleList.contains(9);
-
+**Example:**
+```java
+exampleList.contains(9);
+```
 *Return value:*
+```java
+true
+```
 
-    true
+**Exceptions:**
 
+*None*
 </details>
 
 ---
@@ -251,20 +301,24 @@ For example purposes we will consider this as "exampleList" :
 <details>
 <summary><strong>indexOf(int value)</strong></summary>
 
-> Gets the index of a given value inside the list.
+*Gets the index of a given value inside the list.*
 
-**Returns :** *int*
+- **Returns:** *int*
 
-**Args :** *value (int)*
+- **Args:** *value (int)*
 
-**Example :**
-
-    exampleList.indexOf(16);
-
+**Example:**
+```java
+exampleList.indexOf(16);
+```
 *Return value:*
+```java
+3
+```
 
-    3
+**Exceptions:**
 
+*If the value is not in the list the method returns ```-1```.*
 </details>
 
 ---
@@ -272,20 +326,24 @@ For example purposes we will consider this as "exampleList" :
 <details>
 <summary><strong>remove(int value)</strong></summary>
 
->Removes a given value from the list.
+*Removes a node with a given value from the list.*
 
-**Returns :** *None*
+- **Returns:** *None*
 
-**Args :** *value (int)*
+- **Args:** *value (int)*
 
-**Example :**
-
-    exampleList.remove(52);
-
+**Example:**
+```java
+exampleList.remove(52);
+```
 *Updated exampleList:*
-
+```java
     {12, 34, 16, 9, 29}
+```
 
+**Exceptions:**
+
+*If the list is empty or no node with the given value was found, the method performs no action.*
 </details>
 
 ---
@@ -293,20 +351,24 @@ For example purposes we will consider this as "exampleList" :
 <details>
 <summary><strong>removeAt(int index)</strong></summary>
 
-> Removes a value at a given index from the list.
+*Removes a value at a given index from the list.*
 
-**Returns :** *None*
+- **Returns:** *None*
 
-**Args :** *index (int)*
+- **Args:** *index (int)*
 
-**Example :**
-
-    exampleList.removeAt(0);
-
+**Example:**
+```java
+exampleList.removeAt(0);
+```
 *Updated exampleList:*
+```java
+{34, 52, 16, 9, 29}
+```
 
-    {34, 52, 16, 9, 29}
+**Exceptions:**
 
+*If the list is empty or the index is invalid, the method performs no action.*
 </details>
 
 ---
@@ -314,20 +376,24 @@ For example purposes we will consider this as "exampleList" :
 <details>
 <summary><strong>print()</strong></summary>
 
-> Prints all values of the list.
+*Prints all values of the list.*
 
-**Returns :** *None*
+- **Returns:** *None*
 
-**Args :** *None*
+- **Args:** *None*
 
-**Example :**
-
-    exampleList.print()
-
+**Example:**
+```java
+exampleList.print();
+```
 *Output:*
+```java
+12, 34, 52, 16, 9, 29,
+```
 
-    12, 34, 52, 16, 9, 29,
+**Exceptions:**
 
+*None*
 </details>
 
 </details>
